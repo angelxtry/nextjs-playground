@@ -24,6 +24,20 @@ module.exports = {
     semi: ['error', 'always'],
     quotes: ['error', 'single'],
     'jsx-quotes': ['error', 'prefer-single'],
+    'simple-import-sort/imports': [
+      'error',
+      {
+        groups: [
+          ['^react$', '^@'],
+          ['^[a-z]'],
+          ['^~'],
+          ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+          ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+          ['^.+\\.s?css$'],
+          ['^\\u0000'],
+        ],
+      },
+    ],
   },
   settings: {
     react: {
